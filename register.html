@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModiZone login register</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="logo">
+            <img src="image/logo.png" alt="">
+        </a>
+        <!--Menu Icon-->
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <!--Links-->
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shopnow.html">Shop now</a></li>
+            <li><a href="index.html #about">About us</a></li>
+            <li><a href="index.html #Reviews">Reviews</a></li>
+        </ul>
+
+        <!--icons-->
+        <div class="header-icon">
+          <a href="cart.html">
+                <i class="fa fa-solid fa-cart-shopping">
+                <span id="cartCount" class="cart-count">0</span>
+                </i>
+          </a>
+          <i class="fa fa-solid fa-magnifying-glass" id="search-icon"></i>
+          <i class="fa fa-solid fa-user" id="user-icon"></i>
+        </div>
+
+        <!--search box-->
+        <div class="search-box"> 
+        <input type="search" placeholder="Search Here..............">
+        </div>
+        
+        <div class="popup-box" id="popupBox">
+        <a href="login.html" class="btn-login">Login</a>
+        </div>
+    </header>
+    <section class="home" id="home">
+       <section class="register-container">
+         <h2>Create Your ModiZone Account</h2>
+            <form id="registerForm" action="backend/register.php" method="POST">
+                  <label for="fullname">Full Name:</label>
+                  <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+                  <button type="submit">Register</button>
+             <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+          </form>
+      </section>
+  </section>
+
+
+
+     <script src="script.js"></script>
+    </body>
+    </html>

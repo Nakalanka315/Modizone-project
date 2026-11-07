@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModiZone login</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="logo">
+            <img src="image/logo.png" alt="">
+        </a>
+        <!--Menu Icon-->
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <!--Links-->
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shopnow.html">Shop now</a></li>
+            <li><a href="index.html #about">About us</a></li>
+            <li><a href="index.html #Reviews">Reviews</a></li>
+        </ul>
+
+        <!--icons-->
+        <div class="header-icon">
+          <a href="cart.html">
+                <i class="fa fa-solid fa-cart-shopping">
+                <span id="cartCount" class="cart-count">0</span>
+                </i>
+          </a>
+          <i class="fa fa-solid fa-magnifying-glass" id="search-icon"></i>
+          <i class="fa fa-solid fa-user" id="user-icon"></i>
+        </div>
+
+        <!--search box-->
+        <div class="search-box"> 
+        <input type="search" placeholder="Search Here..............">
+        </div>
+        
+        <div class="popup-box" id="popupBox">
+        <a href="register.html" class="btn-login">Register</a>
+        </div>
+    </header>
+
+    <!--login page-->
+    <section class="home" id="home">
+      <section class="login-container">
+         <div class="login-bg">
+           <div class="login-card">
+             <h2>Login to ModiZone</h2>
+              <form id="loginForm" method="POST" action="login.php">
+               <label for="email"><b>Email</b></label>
+                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                 <label for="password"><b>Password</b></label>
+                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                 <button type="submit" class="login-btn">Login</button>
+                 <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+               </form>
+             </div>
+           </div>
+        </section>
+    <script>
+      // Show server-side error (redirect sets ?error=1)
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('error') === '1') {
+          alert('Invalid email or password. Please try again.');
+          // remove query string so the message doesn't reappear on refresh
+          const u = new URL(window.location);
+          u.search = '';
+          window.history.replaceState({}, document.title, u.toString());
+        }
+      })();
+    </script>
+    </section>
+     <script src="script.js"></script>
+</body>
+</html>
